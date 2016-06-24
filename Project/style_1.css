@@ -54,7 +54,7 @@ position: relative;
   margin-right: 0%;
   margin-left: 5%;
   margin-bottom: 4%;
-
+  margin-top: 4%;
 }
 
 .section_1 {
@@ -82,7 +82,7 @@ position: relative;
   width: auto;
 }
 
-.buttons{
+.button_now_playing{
   display: block;
   width: 20%;
   height: 18%;
@@ -116,14 +116,79 @@ position: relative;
   overflow: scroll;
 }
 
-ul li {
+ .class_title_inTheaters {
   color: white;
   font-family: 'Amatic SC', cursive;
   font-size: 25px;
 }
-.section_2{
+/*.section_2{
   position: relative;
   margin-left: 8%;
   width: 900px;
   height: 600px;
+}*/
+
+.section_2 {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.box_2{
+  position: relative;
+  margin-left: 30%;
+  width: 800px;
+  height: 500px;
+  border: white solid 5px;
+  margin-top: 5%;
+  margin-bottom: 4%;
+
+}
+.box_2 .carousel{
+  height: 250px;
+  overflow: visible;
+}
+.box_2 .carousel .carousel-item img{
+  width: auto;
+}
+
+.button_coming_soon{
+  display: block;
+  width: 20%;
+  height: 18%;
+  position: absolute;
+  top: 0%;
+  left:4%;
+  padding-top: 5px;
+  padding-left: 42px;
+  /*border: 2px black solid;*/
+}
+
+#coming_soon_butt {
+  color: yellow;
+}
+
+.waves-effect{
+  margin-top: 40px;
+  margin-bottom: 50px;
+  background-color: transparent;
+  border: 3px white solid;
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+}
+
+.title_upComing ul{
+  position: absolute;
+  left: 1%;
+  width: 300px;
+  height: 520px;
+  border: white solid 5px;
+  margin-right: 8%;
+  overflow: scroll;
+}
+
+.class_title_upComing {
+ color: white;
+ font-family: 'Amatic SC', cursive;
+ font-size: 25px;
 }

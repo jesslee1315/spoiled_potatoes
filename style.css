@@ -9,12 +9,12 @@ overflow: hidden;
 padding-top: 0;
 }
 
-.video-container{
+/*.responsive-video{
 position: relative;
 max-width: 100%;
 height: 100%;
 padding: 100vh;
-}
+}*/
 
 #videoIFrame{
   top: 0% !important;

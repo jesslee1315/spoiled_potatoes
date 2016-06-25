@@ -11,6 +11,11 @@ $(document).ready(function(){
         grab_youTube_movieTitles(user_searched)
       })
 
+      // BUTTON TO SCROLL TO TWEETS
+      $("#spoiled_tweets_butt").on("click", function(){
+        this.animate({scrollRight : '+=200'}, 'slow')
+      })
+
       // YOUTUBE AJAX CALL
       function grab_youTube_movieTitles(title){
         // var my_youTube_key = "AIzaSyCltwf9a0iWjc2sQ3MnZua4mFxqF119-A0";
@@ -67,15 +72,14 @@ $(document).ready(function(){
             $(".modal-content").append(`<p class="p_tags">${modal_overview}</p><p class="p_tags"><img src="../Project/icon/Potato-64 (3).png"/>Potato votes: ${modal_votes}</p>`)
             $('#modal1').openModal();
           })
-
-      });
-
+      }); //IN THEATERS AJAX CALL ENDS
 
 
 
+
+      // UPCOMING MOVIES AJAX CALL
       var container_overview_upComing = [];
       var container_votes_upComing = [];
-        // UPCOMING MOVIES AJAX CALL
         $.get(`http://api.themoviedb.org/3/movie/upcoming?api_key=${my_movies_info_key}`, function(my_data_upComing){
           for (var i = 0; i < my_data_upComing.results.length; i++) {
             var title_upComing = my_data_upComing.results[i].original_title;

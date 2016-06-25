@@ -46,11 +46,6 @@ $(document).ready(function(){
         } //FOR LOOP ENDS HERE
 
 
-        // $("#listPreReq").on('click', 'li', function() {
-        //     alert($(this).html());
-        // }); ******************LOOOOOOOKKKKKK AT THISSSSSSSSSSSS!!!!!
-
-
         //Now playing list link to youtube
         $('ul').on('click', '.class_title_inTheaters', function(){
           var li_innerHTML = this.innerHTML;
@@ -58,19 +53,18 @@ $(document).ready(function(){
         })
           //Function to show carousel
           $('.box_1 .carousel').carousel();
-
           //hidden until button is pressed.
-          //note must retract list when button is clicked on again
           $(title_list).hide();
-          $("#now_playing_butt").one("click",function(){
+          $("#now_playing_butt").on("click", function(){
             $(title_list).fadeIn("very slow");
           })
+
           // Dynmically creating modals
-          $(".poster_inTheaters").one("click", function(){
+          $(".poster_inTheaters").on("click", function(){
             $("p").empty();
             var modal_overview = container_overview[+this.id]
             var modal_votes = container_votes[+this.id]
-            $(".modal-content").append(`<p>${modal_overview}</p><p>Potato votes: ${modal_votes}</p>`)
+            $(".modal-content").append(`<p class="p_tags">${modal_overview}</p><p class="p_tags"><img src="../Project/icon/Potato-64 (3).png"/>Potato votes: ${modal_votes}</p>`)
             $('#modal1').openModal();
           })
 
@@ -89,7 +83,6 @@ $(document).ready(function(){
             var overview_upComing = my_data_upComing.results[i].overview;
             var vote_upComing = my_data_upComing.results[i].vote_average;
             var poster_images_upComing = `https://image.tmdb.org/t/p/w300${poster_string_upComing}`
-            console.log(poster_images_upComing);
 
             //Storing overview in an array
             container_overview_upComing.push(overview_upComing)
@@ -116,14 +109,14 @@ $(document).ready(function(){
 
           //note must retract list when button is clicked on again
           $(title_list_upComing).hide();
-          $("#coming_soon_butt").one("click",function(){
+          $("#coming_soon_butt").on("click",function(){
             $(title_list_upComing).fadeIn("very slow");
           })
-            $(".poster_upComing").one("click", function(){
+            $(".poster_upComing").on("click", function(){
               $("p").empty();
               var modal_overview_upComing = container_overview_upComing[+this.id]
               var modal_votes_upComing  = container_votes_upComing[+this.id]
-              $(".modal-content").append(`<p>${modal_overview_upComing}</p><p>Potato votes: ${modal_votes_upComing}</p>`)
+              $(".modal-content").append(`<p class="p_tags">${modal_overview_upComing}</p><p class="p_tags"><img src="../Project/icon/Potato-64 (3).png"/>Potato votes: ${modal_votes_upComing}</p>`)
               $('#modal2').openModal();
             })
         });  //End of upcoming get request

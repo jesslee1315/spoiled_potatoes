@@ -18,6 +18,7 @@ $(document).one("click", function(){
         $(".logo").fadeIn(30000)
       // })
     })
+
 });
 
 

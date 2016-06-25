@@ -1,9 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Amatic+SC:700);
 
 
+
 body {
 background-color: #734600;
-/*opacity: .5;*/
 }
 
 .logo{
@@ -33,27 +33,42 @@ h1 {
   margin-left: 5%;
 }
 
+.button_jump_right{
+  display: block;
+  width: 20%;
+  height: 18%;
+  position: absolute;
+  top: 4%;
+  left: 78%;
+  padding-top: 0px;
+  padding-left: 42px;
+}
+
+#spoiled_tweets_butt {
+  color: yellow;
+}
 
 main{
 position: relative;
 }
+
 
 #top_1 {
   margin-right: 0%;
   margin-left: 5%;
 }
 
-#bottom_1 {
-  margin-right: 0%;
-  margin-left: 5%;
-  margin-top: 4%;
+#middle {
+  /*margin-right: 0%;*/
+  margin-left: 10%;
+  margin-top: 5%;
 
 }
 
 #bottom_2 {
   margin-right: 0%;
   margin-left: 5%;
-  margin-bottom: 4%;
+  margin-bottom: 3%;
   margin-top: 4%;
 }
 
@@ -81,7 +96,6 @@ position: relative;
 .carousel .carousel-item img{
   width: auto;
 }
-
 .button_now_playing{
   display: block;
   width: 20%;
@@ -91,8 +105,8 @@ position: relative;
   left:4%;
   padding-top: 5px;
   padding-left: 42px;
-  /*border: 2px black solid;*/
 }
+
 #now_playing_butt {
   color: yellow;
 }
@@ -106,6 +120,24 @@ position: relative;
   font-size: 30px;
 }
 
+.box_twitter{
+  border: 6px black solid;
+  width: 600px;
+  height: 1313px;
+  position: absolute;
+  left: 100%;
+  top: 3%;
+}
+
+.box_movie_quote_twitter{
+  border: 6px black solid;
+  width: 600px;
+  height: 1313px;
+  position: absolute;
+  left: 150%;
+  top: 3%;
+}
+
 .title_now_playing ul{
   position: absolute;
   left: 1%;
@@ -114,6 +146,7 @@ position: relative;
   border: white solid 5px;
   margin-right: 8%;
   overflow: scroll;
+  padding-left: 15px;
 }
 
  .class_title_inTheaters {
@@ -121,12 +154,17 @@ position: relative;
   font-family: 'Amatic SC', cursive;
   font-size: 25px;
 }
-/*.section_2{
-  position: relative;
-  margin-left: 8%;
-  width: 900px;
-  height: 600px;
-}*/
+
+div .modal-content {
+  background-color: black;
+  color: white;
+  border: #F1C40E 2px solid;
+}
+
+.p_tags{
+  font-family: 'Amatic SC', cursive;
+  font-size: 25px;
+}
 
 .section_2 {
   width: 100vw;
@@ -141,7 +179,7 @@ position: relative;
   height: 500px;
   border: white solid 5px;
   margin-top: 5%;
-  margin-bottom: 4%;
+  margin-bottom: 0%;
 
 }
 .box_2 .carousel{
@@ -151,7 +189,6 @@ position: relative;
 .box_2 .carousel .carousel-item img{
   width: auto;
 }
-
 .button_coming_soon{
   display: block;
   width: 20%;
@@ -161,7 +198,6 @@ position: relative;
   left:4%;
   padding-top: 5px;
   padding-left: 42px;
-  /*border: 2px black solid;*/
 }
 
 #coming_soon_butt {
@@ -185,6 +221,7 @@ position: relative;
   border: white solid 5px;
   margin-right: 8%;
   overflow: scroll;
+  padding-left: 15px;
 }
 
 .class_title_upComing {

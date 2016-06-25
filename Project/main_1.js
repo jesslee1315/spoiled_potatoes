@@ -7,7 +7,7 @@ $(document).ready(function(){
       //Grabbing value of input text field using enter!!!
       $(".enter").submit(function(e){
         e.preventDefault();
-        var user_searched = $("#search").val();
+        var user_searched = $("#search").val()+"Official Trailer HD";
         grab_youTube_movieTitles(user_searched)
       })
 
@@ -18,7 +18,7 @@ $(document).ready(function(){
         $.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${title}&type=video&key=AIzaSyCltwf9a0iWjc2sQ3MnZua4mFxqF119-A0`, function(data){
         var video_id = (data.items[0].id.videoId);
         // `https://www.youtube.com/watch?v=${video_id}`
-        window.location.replace(`https://www.youtube.com/watch?v=${video_id}`);
+        window.location.assign(`https://www.youtube.com/watch?v=${video_id}`);
         })
       };
 
@@ -42,7 +42,7 @@ $(document).ready(function(){
           var title_list = $(".title_now_playing ul").append(`<li class="class_title_inTheaters" id=${title}>${title}</li>`)
 
             // Dynanic poster carousel being created.
-          $(".carousel").append(`<div class="carousel-item"><img id=${i} class="poster_inTheaters" src=${poster_images}></div>`)
+          $(".box_1 .carousel").append(`<div class="carousel-item"><img id=${i} class="poster_inTheaters" src=${poster_images}></div>`)
         } //FOR LOOP ENDS HERE
 
 
@@ -57,7 +57,7 @@ $(document).ready(function(){
           grab_youTube_movieTitles(li_innerHTML)
         })
           //Function to show carousel
-          $('.carousel').carousel();
+          $('.box_1 .carousel').carousel();
 
           //hidden until button is pressed.
           //note must retract list when button is clicked on again
@@ -78,6 +78,9 @@ $(document).ready(function(){
 
 
 
+
+      var container_overview_upComing = [];
+      var container_votes_upComing = [];
         // UPCOMING MOVIES AJAX CALL
         $.get(`http://api.themoviedb.org/3/movie/upcoming?api_key=${my_movies_info_key}`, function(my_data_upComing){
           for (var i = 0; i < my_data_upComing.results.length; i++) {
@@ -85,20 +88,20 @@ $(document).ready(function(){
             var poster_string_upComing = my_data_upComing.results[i].poster_path;
             var overview_upComing = my_data_upComing.results[i].overview;
             var vote_upComing = my_data_upComing.results[i].vote_average;
-            var poster_images_UpComing = `https://image.tmdb.org/t/p/w300${poster_string_upComing}`
-            console.log(poster_images_UpComing);
+            var poster_images_upComing = `https://image.tmdb.org/t/p/w300${poster_string_upComing}`
+            console.log(poster_images_upComing);
 
             //Storing overview in an array
-            container_overview.push(overview_upComing)
-
+            container_overview_upComing.push(overview_upComing)
             //Storing votes in an array
-            container_votes.push(vote_upComing);
+            container_votes_upComing.push(vote_upComing);
 
             // Appends title of Up coming to div
             var title_list_upComing = $(".title_upComing ul").append(`<li class="class_title_upComing" id=${title_upComing}>${title_upComing}</li>`)
 
               // Dynanic poster carousel being created.
-            $(".second_carousel").append(`<div class="carousel-item"><img id =${i} class="poster_upComing" src=${poster_images_UpComing}></div>`)
+            $(".box_2 .carousel").append(`<div class="carousel-item"><img id=${i} class="poster_upComing" src=${poster_images_upComing}></div>`)
+
           }; //FOR LOOP ENDS HERE
 
 
@@ -118,8 +121,8 @@ $(document).ready(function(){
           })
             $(".poster_upComing").one("click", function(){
               $("p").empty();
-              var modal_overview_upComing = container_overview[+this.id]
-              var modal_votes_upComing  = container_votes[+this.id]
+              var modal_overview_upComing = container_overview_upComing[+this.id]
+              var modal_votes_upComing  = container_votes_upComing[+this.id]
               $(".modal-content").append(`<p>${modal_overview_upComing}</p><p>Potato votes: ${modal_votes_upComing}</p>`)
               $('#modal2').openModal();
             })

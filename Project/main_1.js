@@ -7,19 +7,18 @@ $(document).ready(function(){
       //Grabbing value of input text field using enter!!!
       $(".enter").submit(function(e){
         e.preventDefault();
-        var user_searched = $("#search").val()+"Official Movie Trailer HD";
+        var user_searched = $("#search").val() + "Official Trailer HD";
         grab_youTube_movieTitles(user_searched)
       })
 
       // BUTTON TO SCROLL TO TWEETS
       $("#spoiled_tweets_butt").on("click", function(){
-        $('html, body').animate({marginLeft: "-=700px"}, 450)
-        $('html, body').animate({marginRight: "+=700px"}, 450)
+        $('html, body').animate({marginLeft: "-=675px"}, 450)
+        $('html, body').animate({marginRight: "+=675px"}, 450)
       });
 
       // YOUTUBE AJAX CALL
       function grab_youTube_movieTitles(title){
-        // var my_youTube_key = "AIzaSyCltwf9a0iWjc2sQ3MnZua4mFxqF119-A0";
         // pass typed in OR if title is clicked to (title).
         $.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${title}&type=video&key=AIzaSyCltwf9a0iWjc2sQ3MnZua4mFxqF119-A0`, function(data){
         var video_id = (data.items[0].id.videoId);

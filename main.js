@@ -14,7 +14,7 @@ $(document).ready(function(){
           $(".div_for_logo").append(`<h1 class="logo"><img class="logo" id="potato_icon" src="./Project/icon/Potato-64.png"/>SPOILED PATATOS</h1>`)
           $(".logo").fadeIn(30000)
           });
-          $(".div_for_logo").dblclick(function(){
+          $(".div_for_logo").on("click", function(){
             window.location.assign(`http://localhost:8000/Project/index_1.html`);
             // CHANGE TO FIREBASE
           });

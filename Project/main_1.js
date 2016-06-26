@@ -7,13 +7,14 @@ $(document).ready(function(){
       //Grabbing value of input text field using enter!!!
       $(".enter").submit(function(e){
         e.preventDefault();
-        var user_searched = $("#search").val()+"Official Trailer HD";
+        var user_searched = $("#search").val()+"Official Movie Trailer HD";
         grab_youTube_movieTitles(user_searched)
       })
 
       // BUTTON TO SCROLL TO TWEETS
       $("#spoiled_tweets_butt").on("click", function(){
-        this.animate({scrollRight : '+=200'}, 'slow')
+        // console.log($("html, body").scrollLeft() + " px");
+        // $('html, body').animate({scrollLeft:0}1335)
       })
 
       // YOUTUBE AJAX CALL
@@ -65,7 +66,7 @@ $(document).ready(function(){
           })
 
           // Dynmically creating modals
-          $(".poster_inTheaters").on("click", function(){
+          $(".poster_inTheaters").dblclick(function(){
             $("p").empty();
             var modal_overview = container_overview[+this.id]
             var modal_votes = container_votes[+this.id]
@@ -116,7 +117,7 @@ $(document).ready(function(){
           $("#coming_soon_butt").on("click",function(){
             $(title_list_upComing).fadeIn("very slow");
           })
-            $(".poster_upComing").on("click", function(){
+            $(".poster_upComing").dblclick(function(){
               $("p").empty();
               var modal_overview_upComing = container_overview_upComing[+this.id]
               var modal_votes_upComing  = container_votes_upComing[+this.id]

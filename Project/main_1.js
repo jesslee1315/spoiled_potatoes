@@ -13,9 +13,9 @@ $(document).ready(function(){
 
       // BUTTON TO SCROLL TO TWEETS
       $("#spoiled_tweets_butt").on("click", function(){
-        // console.log($("html, body").scrollLeft() + " px");
-        // $('html, body').animate({scrollLeft:0}1335)
-      })
+        $('html, body').animate({marginLeft: "-=700px"}, 45«0)
+        $('html, body').animate({marginRight: "+=700px"}, 450)
+      });
 
       // YOUTUBE AJAX CALL
       function grab_youTube_movieTitles(title){

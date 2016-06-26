@@ -58,17 +58,25 @@ h1 {
 
 #movie_review_tweets{
   width: 35%;
-  height: 48%;
+  height: 35%;
   color: yellow;
-  font-size: 50px;
+  font-size: 40px;
   margin-right: 29%;
+}
+
+.ahref_potato{
+  width: 70px;
+  height: 75px;
+  position: absolute;
+  top: 18%;
+  left: 48%;
 }
 
 #movie_quotes_tweets{
   width: 35%;
-  height: 48%;
+  height: 35%;
   color: yellow;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 main{

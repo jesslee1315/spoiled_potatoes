@@ -94,7 +94,7 @@ section {
   height: 20vh;
   position: absolute;
   top: 10%;
-  left: 5%;
+  left: 10%;
 
 }
 
@@ -105,7 +105,7 @@ h1{
   left: 10%;
   font-family: 'Amatic SC', cursive;
   color: yellow;
-  font-size: 100px;
+  font-size: 75px;
 }
 
 /*div .fixed-action-btn .horizontal{

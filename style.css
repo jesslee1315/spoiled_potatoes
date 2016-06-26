@@ -16,6 +16,8 @@ section {
   position: absolute;
   top: 25%;
   left: 25%;
+  border: white 5px white;
+  z-index: 5;
 }
 
 .brown_div {
@@ -68,6 +70,14 @@ section {
   display: block;
 }
 
+.invisible_div {
+  width: 88%;
+  height: 85%;
+  position: absolute;
+  top: 10%;
+  left: 6%;
+  z-index: 1;
+}
 
 .div_for_skip_butt{
   width: 20vw;
@@ -75,6 +85,7 @@ section {
   position: relative;
   top: 60%;
   left: 30%;
+  z-index: 5;
 }
 
 #skip_butt {
@@ -86,6 +97,8 @@ section {
   position: absolute;
   top: 8%;
   left: 30%;
+  z-index: 5;
+
 }
 
 
@@ -95,31 +108,19 @@ section {
   position: absolute;
   top: 10%;
   left: 10%;
-
+  z-index: 5;
 }
 
 
 h1{
   position: absolute;
+  z-index: 5;
   top: 0%;
   left: 10%;
   font-family: 'Amatic SC', cursive;
   color: yellow;
   font-size: 75px;
 }
-
-/*div .fixed-action-btn .horizontal{
-margin: 0px;
-}
-
-.fixed-action-btn{
-position: absolute;
-top: 3%;
-left: 4%;
-margin: 0px;
-}*/
-
-
 
 
 /*

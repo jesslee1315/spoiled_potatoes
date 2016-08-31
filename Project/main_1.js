@@ -3,6 +3,12 @@ var my_movies_info_key = "b3b5764bd01116e8180010a054fa2bb3";
 $(document).ready(function(){
       var container_overview = [];
       var container_votes = [];
+      //
+      // var potato_icon_container = ["icon/Potato-64.png", "../Project/icon/Potato-64 (1).png", "../Project/icon/Potato-64 (2).png", "../Project/icon/Potato-64 (3).png"]
+      // for (var i = 0; i < potato_icon_container.length; i++) {
+      //   //  var potato_spewer = Math.floor(Math.random() * potato_icon_container.length);
+      //    $('body').append(`<img src = ${potato_icon_container[i]} />`);
+      // }
 
       //Grabbing value of input text field using enter!!!
       $(".enter").submit(function(e){
